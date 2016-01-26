@@ -1,0 +1,14 @@
+//inicijalizacija foldera u git
+git init
+
+//pregled koje su promijene napravljene, prije git add promjene su oznacene crveno, poslije zeleno
+git status
+
+//dodaje promjene u git zapis tocka se stavlja ako se dodaju sve promjene, inace se pise koja promjena da se doda
+git add .
+
+//sve promjene se spremaju, sa -m dodaje se poruka da osoba poslije zna koje promjene su napravljene
+git commit -m "Poruka"
+
+//pregled svih commita koji su napravljeni u projektu
+git log
