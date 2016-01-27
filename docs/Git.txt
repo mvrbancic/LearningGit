@@ -9,6 +9,34 @@ git add .
 
 //sve promjene se spremaju, sa -m dodaje se poruka da osoba poslije zna koje promjene su napravljene
 git commit -m "Poruka"
+--amend
 
 //pregled svih commita koji su napravljeni u projektu
 git log
+
+//ostale naredbe
+//prikazuje sve branch koji postoje u git folderu
+git branch
+
+//kreira branch
+git branch {name}
+
+
+//promjena branch
+git checkout {name}
+
+//pregled promjena
+git diff
+
+git digg {one branch}..{new branch}
+
+//spajanje brencha
+git merge
+
+//splanje podataka na github
+git push origin {name branch}
+
+//slanje prvi put na github (treba kreirati gir repository na github)
+git remote add origin {git hub urel && bitbucket}
+
+git remove -v
