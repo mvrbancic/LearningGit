@@ -1,42 +1,56 @@
-//inicijalizacija foldera u git
+// inicijalizacija foldera u git
 git init
 
-//pregled koje su promijene napravljene, prije git add promjene su oznacene crveno, poslije zeleno
+// pregled koje su promjene napravljene
+// prije git add promjene su oznacene crveno, poslije zeleno
 git status
 
-//dodaje promjene u git zapis tocka se stavlja ako se dodaju sve promjene, inace se pise koja promjena da se doda
+// dodaje promjene u git zapis tocka se stavlja ako se dodaju sve promjene
+// inace se pise putanja promjene da se doda
 git add .
 
-//sve promjene se spremaju, sa -m dodaje se poruka da osoba poslije zna koje promjene su napravljene
+// sve promjene se spremaju
+// sa -m dodaje se poruka da osoba poslije zna koje promjene su napravljene
 git commit -m "Poruka"
---amend
+git commit -a	// istovremeno add . i commit -m, otvara text editor za dodavanje poruke commit-a
+git commit --amend	// isto kao i -a
 
-//pregled svih commita koji su napravljeni u projektu
+// pregled svih commita koji su napravljeni u projektu
 git log
 
-//ostale naredbe
-//prikazuje sve branch koji postoje u git folderu
+// ostale naredbe
+// prikazuje sve branch koji postoje u git folderu
 git branch
 
-//kreira branch
+// kreira branch
 git branch {name}
 
-
-//promjena branch
+// promjena branch
 git checkout {name}
 
-//pregled promjena
+// create and checkout a new branch
+git checkout -b {branch_name}
+
+// pregled promjena
 git diff
 
-git digg {one branch}..{new branch}
+git diff {one branch}..{new branch}
 
-//spajanje brencha
-git merge
+// spajanje brencha
+git merge {branch_name}
 
-//splanje podataka na github
-git push origin {name branch}
+// prije svakog push-a na repozitorij (prije pull request-a)
+// merge s izvornom granom kako bi se lokalno riješili mogući conflict-i
+git pull origin {starting_branch_name}
 
-//slanje prvi put na github (treba kreirati gir repository na github)
+// slanje podataka na github
+git push origin {branch_name}
+
+// slanje prvi put na github (treba kreirati git repository na github)
 git remote add origin {git hub urel && bitbucket}
 
 git remove -v
+
+// clear untracked files
+1. git clean -f -n	// pokazuje sto ce se obrisati
+2. git clean -f		// brise bez "dry-run"-a 
